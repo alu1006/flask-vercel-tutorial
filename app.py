@@ -25,7 +25,7 @@ def callback():
 
     return "OK"
 
-@handler.add(MessageEvent, message=TextMessage)
+@line_handler.add(MessageEvent, message=TextMessage)
 def handle_message(event):
     user_message = event.message.text
     reply_message = f"你說了：{user_message}"
