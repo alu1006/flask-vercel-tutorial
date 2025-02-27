@@ -33,7 +33,7 @@ def callback():
 def handle_message(event):
     user_message = event.message.text
     
-    client = OpenAI(api_key=os.getenv('OPENAI_API_KEY'))
+    client = OpenAI(api_key=os.getenv('OPENAI_KEY'))
 
     completion = client.chat.completions.create(
         model="gpt-4o-mini",
